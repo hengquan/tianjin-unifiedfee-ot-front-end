@@ -1,13 +1,12 @@
 <project
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>cn.taiji</groupId>
 		<artifactId>taiji-pom</artifactId>
 		<version>1.0.3-RELEASES</version>
-		<relativePath /> 
+		<relativePath />
 	</parent>
 	<artifactId>tianjin-unifiedfee-ot</artifactId>
 	<name>tianjin-unifiedfee-ot</name>
@@ -53,5 +52,38 @@
 			<groupId>cn.taiji</groupId>
 			<artifactId>taiji-redis</artifactId>
 		</dependency>
+
+		<!-- 分页 -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+
+		<!-- mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
+
+	<build>
+		<!--扫描类路径下的 xml文件, used by mybatis mapper -->
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+
 </project>

@@ -2,15 +2,8 @@
  * 公共变量
  */
 var comVars = {
-  winHeight: '',
-};
-/**
- * 临时变量
- * @type {{}}
- */
-var temp = {
-};
-
+  winHeight: ''
+}
 $(function () {
   /**************************
    * 初始化
@@ -36,10 +29,6 @@ $(function () {
   });
   $('.pt-menu-child').click(function (e) {
     resetAllSelected()
-    var frameUrl = $(e.currentTarget).data('url');
-    if(frameUrl) {
-      changeMainframeSrc(frameUrl);
-    }
     $(this).addClass('pt-menu-selected').siblings().removeClass('pt-menu-selected')
     $(this).parent('.pt-second-menu').parent('.pt-menu-list').addClass('pt-menu-open')
     return false
@@ -83,21 +72,19 @@ $(function () {
  */
 function initDom () {
   comVars = {
-    winHeight: $(window).height(),
-    mainframe: function() {
-      return document.getElementById("mainframe");
-    }
-  };
+    winHeight: $(window).height()
+  }
   $('.pt-view').css('height', comVars.winHeight - 60);
-  var leftbarH = comVars.winHeight - 120;
-  $(".pt-menu").css("height", leftbarH);
 }
 function initOnce() {
   if (window.localStorage.getItem('menuOpen') === 'true') {
+      openAside()
   } else {
+      closeAside()
   }
   $('#pt-bar').click(function () {
       console.log($('.pt-nav').hasClass('pt-open'))
+
       if ($('.pt-nav').hasClass('pt-open')){
           closeAside()
       } else {
@@ -107,46 +94,12 @@ function initOnce() {
 
 }
 function closeAside() {
-  $('.pt-nav').removeClass('pt-open');
-  $('.pt-view').removeClass('pt-open');
-  localStorage.setItem('menuOpen','false')
+    $('.pt-nav').removeClass('pt-open');
+    $('.pt-view').removeClass('pt-open');
+    localStorage.setItem('menuOpen','false')
 }
 function openAside() {
-  $('.pt-nav').addClass('pt-open');
-  $('.pt-view').addClass('pt-open');
-  localStorage.setItem('menuOpen','true')
+    $('.pt-nav').addClass('pt-open');
+    $('.pt-view').addClass('pt-open');
+    localStorage.setItem('menuOpen','true')
 }
-function loadNicescroll() {
-  var allH = $(window).height();
-  var leftbarH = allH - 120;
-  $(".pt-menu").css("height", leftbarH);
-  $(".pt-menu").niceScroll({
-    cursorborder: "",
-    cursorcolor: "#6598DE",
-    boxzoom: true,
-    autohidemode: 'cursor'
-  });
-  $(".pt-menu").getNiceScroll().hide();
-
-}
-
-/**
- * ======================================
- * top页面控制mainframe,以及调用mainframe中的方法
- */
-
-/**
- * 刷新mainframe中的表格
- * @param id 表格dom的id
- */
-function refreshTable(id) {
-  comVars.mainframe().contentWindow.AF.refreshTable(id);
-}
-
-/**
- * 更改mainframe的src
- */
-function changeMainframeSrc(src) {
-  comVars.mainframe().src = src;
-}
-

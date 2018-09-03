@@ -2,28 +2,63 @@
 $(function () {
     $.ajax({
         type: "Post",
-        url: "http://localhost:8084/rest/classification/getTreeList",
-        // url: "",
+        url: "http://mazhaoyang.cn/index.php/home/output/GangkouGetTree",
         dataType: "json",
         success: function (result) {
-            alert(result.length);
-            var data = JSON.stringify(result);
-            alert(data);
             $('#pt-tree').treeview({
-                data: data,
-
+                data: [
+                    {
+                        text: 'Parent 1',
+                        tags: ['2'],
+                        nodes: [
+                            {
+                                text: 'Child 1',
+                                tags: ['3']
+                            },
+                            {
+                                text: 'Child 2',
+                                tags: ['3']
+                            }
+                        ]
+                    },
+                    {
+                        text: 'Parent 2',
+                        tags: ['7'],
+                        nodes: [
+                            {
+                                text: 'Child 1',
+                                tags: ['3']
+                            },
+                            {
+                                text: 'Child 2',
+                                tags: ['3']
+                            }
+                        ]
+                    },
+                    {
+                        text: 'Parent 3',
+                        href: '#demo',
+                        tags: ['11'],
+                        nodes: [
+                            {
+                                text: 'Child 1',
+                                tags: ['3']
+                            },
+                            {
+                                text: 'Child 2',
+                                tags: ['3']
+                            }
+                        ]
+                    }
+                ],         // 数据源
                 showCheckbox: true,   //是否显示复选框
 
                 multiSelect: false,    //多选
-                levels: 1,
                 onNodeChecked: function (event,data) {
-
                     alert(data.nodeId);
-                    alert(data.id);
                 },
                 onNodeSelected: function (event, data) {
                     alert(data.nodeId);
-                    // alert(data.id);
                 }
             });
         },
