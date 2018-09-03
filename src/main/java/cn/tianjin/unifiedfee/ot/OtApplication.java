@@ -6,15 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
-
 @SpringBootApplication
 @EnableFeignClients({"cn.taiji","cn.tianjin.unifiedfee"})
 @ComponentScan({"cn.taiji","cn.tianjin.unifiedfee"})
 @MapperScan("cn.tianjin.unifiedfee.ot.mapper")
 public class OtApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(OtApplication.class, args);
 	}
-
 }
