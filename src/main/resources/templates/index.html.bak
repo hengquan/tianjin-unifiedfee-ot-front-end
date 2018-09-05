@@ -53,7 +53,7 @@
                     <!--cell-->
                     <li class="pt-menu-list pt-menu-selected">
                         <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
-                        <h3 class="pt-menu-title"><a href="#">学习123资料</a></h3>
+                        <h3 class="pt-menu-title"><a href="#">学习资料</a></h3>
                         <ul class="pt-second-menu">
                             <!--cell-->
                             <li class="pt-menu-child">
@@ -113,7 +113,7 @@
                             <!--cell-->
                             <li class="pt-menu-child">
                                 <span class="glyphicon  glyphicon-th-large" aria-hidden="true"></span>
-                                <h3 class="pt-menu-title"><a href="javascript:void(0);" onclick="toCATA()">分类管理</a></h3>
+                                <h3 class="pt-menu-title"><a href="javascript:void(0);" onclick="toCATA();">分类管理</a></h3>
                             </li>
                             <!--cell-->
                             <li class="pt-menu-child">
@@ -150,8 +150,7 @@
   }
   //分类管理
   function toCATA(){
-  alert("ABC");
-    $("#mainIframe").attr("src","cataList")
+    $("#mainIframe").attr("src","./cataList.html")
   }
 </script>
 

@@ -11,6 +11,10 @@
 	<artifactId>tianjin-unifiedfee-ot</artifactId>
 	<name>tianjin-unifiedfee-ot</name>
 	<url>http://maven.apache.org</url>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <localLibDir>D:\Work\projects\quanxiyun</localLibDir>
+    </properties>
 	<dependencies>
 		<!-- 异常处理模块 -->
 		<dependency>
@@ -52,20 +56,31 @@
 			<groupId>cn.taiji</groupId>
 			<artifactId>taiji-redis</artifactId>
 		</dependency>
-
 		<!-- 分页 -->
 		<dependency>
 			<groupId>com.github.pagehelper</groupId>
 			<artifactId>pagehelper-spring-boot-starter</artifactId>
 			<version>1.2.5</version>
 		</dependency>
-
-		<!-- mysql -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+<dependency>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-devtools</artifactId>
+ <optional>true</optional> <!-- 这个需要为 true 热部署才有效 -->
+</dependency>
+        <!-- 引入平台包 -->
+        <dependency>
+            <groupId>com.spiritdata</groupId>
+            <artifactId>BasicPlat</artifactId>
+            <version>0.2.0.01</version>
+            <scope>system</scope>
+            <systemPath>${localLibDir}/lib/BasicPlat-0.2.0.01.jar</systemPath>
+        </dependency>
 	</dependencies>
 
 	<build>

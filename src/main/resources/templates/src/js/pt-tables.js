@@ -3,7 +3,6 @@ $(function () {
     //1.初始化Table
     var oTable = new TableInit();
     oTable.Init();
-
 });
 
     // 2.返回操作模版
@@ -38,7 +37,7 @@ var TableInit = function () {
             cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
             pagination: true,                   //是否显示分页（*）
             sortable: false,                     //是否启用排序
-            sortOrder: "asc",                   //排序方式
+            sortOrder: "asc1",                   //排序方式
             queryParams: oTableInit.queryParams,//传递参数（*）
             sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
             pageNumber:1,                       //初始化加载第一页，默认第一页
@@ -123,9 +122,9 @@ var TableInit = function () {
             ],
             onLoadSuccess : function(data) {
                 var data = $('#tb_departments').bootstrapTable('getData', true);
+                console.log(data);
                 //合并单元格
                 mergeCells(data, "rowSpan", 1, $('#tb_departments'));
-
             },
         });
     };

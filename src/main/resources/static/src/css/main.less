@@ -2,6 +2,31 @@
 /******************************************************
                     公共样式
 ******************************************************/
+html {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  min-width: 1200px;
+}
+/**************
+  重置字体
+*****************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+  font-family:'Microsoft YaHei'
+}
 //数字字体
 @font-face {
   font-family:'numtext';
@@ -352,7 +377,7 @@ ul {
   left:0;
   top:0;
   &.pt-aside {
-    &:before {
+    &:after {
       border-right:2px solid @inverse;
       //修改@borderColor;
       display:block;
@@ -360,7 +385,7 @@ ul {
       position:fixed;
       top:0;
       bottom:0;
-      padding-left:@asideWidth;
+      left:@asideWidth;
       //@sideMenuWidth + @asideWidth;
       .trans;
     }
@@ -444,7 +469,6 @@ ul {
   padding-top:60px;
   display:inline-block;
   text-align:center;
-  padding-left:30px;
 }
 /*********************
      树标题
@@ -455,6 +479,18 @@ ul {
   font-weight:bold;
 }
 .pt-tree-title {
+  span {
+    border-left:4px solid @primary;
+    padding-left:26px;
+  }
+}
+//弹框树标题
+.pt-tree-title-inner {
+  padding:6px 10px 10px 20px;
+  font-size:14px;
+  font-weight:bold;
+}
+.pt-tree-title-inner {
   span {
     border-left:4px solid @primary;
     padding-left:26px;
@@ -795,6 +831,9 @@ ul {
 .dropdown-menu {
   padding:0 !important;
 }
+.datetimepicker-dropdown-bottom-right {
+  margin-top:42px !important;
+}
 .form-horizontal .radio,.form-horizontal .checkbox,.form-horizontal .radio-inline,.form-horizontal .checkbox-inline {
   padding-top:0;
 }
@@ -820,4 +859,14 @@ ul {
 }
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
   width:100%;
+}
+//button对齐
+.btn-default{
+  margin:0 !important;
+}
+.pt-btn-line .btn-default{
+  margin: 0 10px !important;
+}
+.pt-btn-submit-layer .btn-default{
+  margin: 0 10px !important;
 }

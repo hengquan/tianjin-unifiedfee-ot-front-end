@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <title>列表页</title>
     <!-- 1 bootstrap基础css -->
-    <link href="./libs/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" >
+    <link href="../static/libs/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" >
 
-    <link href="./libs/layer/layer-new.css" rel="stylesheet" >
+    <link href="../static/libs/layer/layer-new.css" rel="stylesheet" >
 
-    <link href="./libs/bootstrap-3.3.7-dist/fonts/iconfont.css" rel="stylesheet">
+    <link href="../static/libs/bootstrap-3.3.7-dist/fonts/iconfont.css" rel="stylesheet">
 
-    <link href="./src/css/pt-main.css" rel="stylesheet" >
+    <link href="../static/src/css/pt-main.css" rel="stylesheet" >
     <link rel="stylesheet" href="css/table.css">
 
-    <script src="./libs/jquery/jquery-1.12.4.js"></script>
+    <script src="../static/libs/jquery/jquery-1.12.4.js"></script>
 
-    <script src="./libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script src="./libs/bootstrap-3.3.7-dist/js/bootstrap-table.min.js"></script>
+    <script src="../static/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../static/libs/bootstrap-3.3.7-dist/js/bootstrap-table.min.js"></script>
 
-    <script src="./libs/layer/layer.js"></script>
+    <script src="../static/libs/layer/layer.js"></script>
 
-    <script src="./src/js/main.js"></script>
+    <script src="../static/src/js/main.js"></script>
 <style>
     iframe{
         width: 100%;
@@ -53,7 +53,7 @@
                     <!--cell-->
                     <li class="pt-menu-list pt-menu-selected">
                         <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
-                        <h3 class="pt-menu-title"><a href="#">学习123资料</a></h3>
+                        <h3 class="pt-menu-title"><a href="#">学习资料</a></h3>
                         <ul class="pt-second-menu">
                             <!--cell-->
                             <li class="pt-menu-child">
@@ -143,7 +143,7 @@
   $(document).ready(function() {
     toMNSC();
   });
-
+alert("ABC");
   //模拟实操
   function toMNSC(){
     $("#mainIframe").attr("src","./mnscList.html")
@@ -151,7 +151,7 @@
   //分类管理
   function toCATA(){
   alert("ABC");
-    $("#mainIframe").attr("src","cataList")
+    $("#mainIframe").attr("src","/cataList")
   }
 </script>
 

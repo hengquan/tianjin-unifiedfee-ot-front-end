@@ -22,7 +22,7 @@ var TableInit = function () {
                 console.log(data);
             },
             onLoadError:function(status) {
-              alert(status);
+              alert(status)
             }
         });
     };
