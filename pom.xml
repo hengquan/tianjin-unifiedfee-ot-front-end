@@ -11,6 +11,12 @@
 	<artifactId>tianjin-unifiedfee-ot</artifactId>
 	<name>tianjin-unifiedfee-ot</name>
 	<url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <localLibDir>E:\workSpace\tianjin-unifiedfee-ot\extlibs\</localLibDir>
+  </properties>
+
 	<dependencies>
 		<!-- 异常处理模块 -->
 		<dependency>
@@ -65,6 +71,14 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
+		</dependency>
+		<!-- 引入平台包 -->
+		<dependency>
+			<groupId>com.spiritdata</groupId>
+			<artifactId>BasicPlat</artifactId>
+			<version>0.2.0.01</version>
+			<scope>system</scope>
+			<systemPath>${localLibDir}/BasicPlat-0.2.0.01.jar</systemPath>
 		</dependency>
 	</dependencies>
 
