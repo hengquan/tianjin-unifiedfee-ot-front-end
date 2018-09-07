@@ -11,14 +11,22 @@
     <link href="./libs/bootstrap-3.3.7-dist/fonts/iconfont.css" rel="stylesheet">
 
     <link href="./src/css/pt-main.css" rel="stylesheet" >
+    <link rel="stylesheet" href="css/table.css">
 
     <script src="./libs/jquery/jquery-1.12.4.js"></script>
 
     <script src="./libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="./libs/bootstrap-3.3.7-dist/js/bootstrap-table.min.js"></script>
 
     <script src="./libs/layer/layer.js"></script>
 
     <script src="./src/js/main.js"></script>
+<style>
+    iframe{
+        width: 100%;
+        height: 100%;
+    }
+</style>
 
 </head>
 <body>
@@ -29,7 +37,6 @@
         <div class="pt-fl pt-system-info" >
             <div class="pt-logo pt-fl"><img src="./src/images/LOGO@2x.png" alt=""></div>
             <div class="pt-slogen pt-fr">天津市港口统一收费服务平台 -<strong>企业中心</strong></div>
-
         </div>
     </div>
     <!-- 头部条  结束 -->
@@ -51,7 +58,7 @@
                             <!--cell-->
                             <li class="pt-menu-child">
                                 <span class="glyphicon  glyphicon-th-large" aria-hidden="true"></span>
-                                <h3 class="pt-menu-title"><a href="#">模拟实操</a></h3>
+                                <h3 class="pt-menu-title"><a href="javascript:void(0);" onclick="toCATA()"">模拟实操</a></h3>
                             </li>
                             <!--cell-->
                             <li class="pt-menu-child">
@@ -106,7 +113,7 @@
                             <!--cell-->
                             <li class="pt-menu-child">
                                 <span class="glyphicon  glyphicon-th-large" aria-hidden="true"></span>
-                                <h3 class="pt-menu-title"><a href="#">分类管理</a></h3>
+                                <h3 class="pt-menu-title"><a href="javascript:void(0);" onclick="toCATA()">分类管理</a></h3>
                             </li>
                             <!--cell-->
                             <li class="pt-menu-child">
@@ -121,7 +128,9 @@
         <!--左侧菜单 结束-->
 
         <!--主视口 -->
-
+        <div class="pt-view pt-open" style="overflow-y:hidden;overflow-x:auto;padding-bottom:0px;">
+            <iframe src="" frameborder="0" id="mainIframe"></iframe>
+        </div>
         <!--主视口 结束-->
     </div>
     <!--公共底部-->
@@ -129,17 +138,20 @@
         <div class="pt-p">版权归属 @ 天津市港口统一管理中心 CopyRight 2018 技术支持电话：400-888-5678</div>
     </div>
 </div>
-
-<script src="./src/js/pt-tables.js"></script>
-<script src="./src/js/pt-tree.js"></script>
 <script>
-// 时间选择
-$('#datetimepicker').datetimepicker({
-    language : 'zh',
-    format : 'yyyy-mm-dd hh:ii:ss',
-    todayBtn : true,
-    autoclose : true
-});
+  $(document).ready(function() {
+    toMNSC();
+  });
+
+  //模拟实操
+  function toMNSC(){
+    $("#mainIframe").attr("src","mnscList")
+  }
+  //分类管理
+  function toCATA(){
+    $("#mainIframe").attr("src","cataList")
+  }
 </script>
+
 </body>
 </html>

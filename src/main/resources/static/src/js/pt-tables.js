@@ -1,4 +1,4 @@
-
+alert("DDD");
 $(function () {
     //1.初始化Table
     var oTable = new TableInit();
@@ -123,6 +123,7 @@ var TableInit = function () {
             ],
             onLoadSuccess : function(data) {
                 var data = $('#tb_departments').bootstrapTable('getData', true);
+                console.log(data);
                 //合并单元格
                 mergeCells(data, "rowSpan", 1, $('#tb_departments'));
 
