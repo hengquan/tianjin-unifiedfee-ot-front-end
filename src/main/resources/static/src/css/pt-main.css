@@ -234,13 +234,8 @@ ul {
 ***********************/
 .pt-nav {
   width: 40px;
-<<<<<<< HEAD
   background: #1c405c;
   color: #fff;
-=======
-  background: #143248;
-  /*color: 40px;*/
->>>>>>> refs/remotes/origin/master
   font-size: 14px;
   position: absolute;
   left: 0;
@@ -394,10 +389,6 @@ ul {
 }
 .pt-container {
   position: relative;
-<<<<<<< HEAD
-=======
-  padding-left: 230px;
->>>>>>> refs/remotes/origin/master
 }
 .pt-aside {
   width: 230px;

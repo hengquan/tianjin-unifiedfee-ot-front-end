@@ -13,15 +13,11 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
 import cn.tianjin.unifiedfee.ot.entity.Tmp;
-import cn.tianjin.unifiedfee.ot.entity.UserInfo;
 import cn.tianjin.unifiedfee.ot.service.TmpService;
-import cn.tianjin.unifiedfee.ot.service.UserInfoService;
 
 @Controller
 public class Test {
 
-	@Autowired
-	private UserInfoService userInfoService;
 	@Autowired
 	private TmpService tmpService;
 	
@@ -50,11 +46,11 @@ public class Test {
 		int pageSize = 10;
 		PageHelper.startPage(pageNum,pageSize);
 		Map<String,Object> map = new HashMap<String,Object>();
-		List<UserInfo> userInfos = userInfoService.getAll();
+		//List<UserInfo> userInfos = userInfoService.getAll();
 		//放入分页
-		PageInfo<UserInfo> pageInfo = new PageInfo<UserInfo>(userInfos);
+		//PageInfo<UserInfo> pageInfo = new PageInfo<UserInfo>(userInfos);
 		//返回
-		map.put("data", pageInfo);
+		//map.put("data", pageInfo);
 		return map;
 	}
 	
