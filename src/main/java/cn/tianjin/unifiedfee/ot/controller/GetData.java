@@ -24,7 +24,7 @@ public class GetData {
 
     @RequestMapping("cataList")
     @ResponseBody
-    public Map<String, Object> tmp(){
+    public Map<String, Object> tmp() {
 //        //当前页数
 //        int pageNum = 1;
 //        //一页多少条

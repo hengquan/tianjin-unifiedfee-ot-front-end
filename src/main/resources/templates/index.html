@@ -53,12 +53,12 @@
                     <!--cell-->
                     <li class="pt-menu-list pt-menu-selected">
                         <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
-                        <h3 class="pt-menu-title"><a href="#">学习123资料</a></h3>
+                        <h3 class="pt-menu-title"><a href="#">学习资料</a></h3>
                         <ul class="pt-second-menu">
                             <!--cell-->
                             <li class="pt-menu-child">
                                 <span class="glyphicon  glyphicon-th-large" aria-hidden="true"></span>
-                                <h3 class="pt-menu-title"><a href="#">模拟实操</a></h3>
+                                <h3 class="pt-menu-title"><a href="javascript:void(0);" onclick="toCATA()"">模拟实操</a></h3>
                             </li>
                             <!--cell-->
                             <li class="pt-menu-child">
@@ -128,7 +128,6 @@
         <!--左侧菜单 结束-->
 
         <!--主视口 -->
-        <!--主视口 -->
         <div class="pt-view pt-open" style="overflow-y:hidden;overflow-x:auto;padding-bottom:0px;">
             <iframe src="" frameborder="0" id="mainIframe"></iframe>
         </div>
@@ -146,11 +145,10 @@
 
   //模拟实操
   function toMNSC(){
-    $("#mainIframe").attr("src","./mnscList.html")
+    $("#mainIframe").attr("src","mnscList")
   }
   //分类管理
   function toCATA(){
-  alert("ABC");
     $("#mainIframe").attr("src","cataList")
   }
 </script>
