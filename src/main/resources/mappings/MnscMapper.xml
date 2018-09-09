@@ -105,4 +105,10 @@
 			</if>
 		</trim>
 	</insert>
+	
+	 <select id="getPageData" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from ts_MNSC
+  </select>
 </mapper>
